@@ -1,0 +1,17 @@
+pip3 install awscli --upgrade --user
+
+curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
+unzip awscli-bundle.zip
+sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
+
+(base) [root@c103138 bio-inform-wang]# aws configure
+
+AWS Access Key ID [****************QEPJ]: 
+AWS Secret Access Key [****************JDdA]: 
+Default region name [wu-dataset]: us-west-2
+Default output format [None]: 
+
+(base) [root@c103138 bio-inform-wang]# aws s3 ls s3://wu-dataset
+
+
+aws s3 sync KN-MCL_HC208 s3://wu-dataset
